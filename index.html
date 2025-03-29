@@ -3,20 +3,72 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Auto Redirect</title>
-    <script type="text/javascript">
-        // Redirect immediately when the page loads
-       window.onload = function() {
-           window.location.href = "https://t.me/Easytaskearnig"; // Change this to the link you want
-          
-          // window.location.href = "https://t.me/Easytaskearnig";
-       
-       };
+    <title>Work From Home</title>
+    <style>
+        body { font-family: Arial, sans-serif; margin: 0; padding: 0; }
+        .header { background: #3b0076; color: white; text-align: center; padding: 10px; }
+        .container { padding: 20px; text-align: center; }
+        .btn { background: red; color: white; padding: 10px 20px; text-decoration: none; border-radius: 5px; }
+        .section { background: #f5f5f5; padding: 20px; margin: 10px 0; }
+        .image { width: 100%; max-width: 600px; display: block; margin: 10px auto; }
+        #countdown { font-size: 24px; font-weight: bold; color: red; }
+    </style>
+    <script>
+        function startCountdown(durationInSeconds, redirectUrl) {
+            let timer = durationInSeconds;
+            const countdownElement = document.getElementById('countdown');
 
-         
+            function updateTimer() {
+                const minutes = Math.floor(timer / 60);
+                const seconds = timer % 60;
+                countdownElement.textContent = ${minutes}:${seconds < 10 ? '0' : ''}${seconds};
+                
+                if (timer > 0) {
+                    timer--;
+                    setTimeout(updateTimer, 1000);
+                } else {
+                    countdownElement.textContent = "Time's up!";
+                    window.location.href = redirectUrl; // Redirect after countdown ends
+                }
+            }
+            updateTimer();
+        }
+
+        window.onload = function() {
+            startCountdown(600, "https://t.me/Easytaskearnig"); // 10 minutes countdown and redirect
+        };
     </script>
 </head>
 <body>
-    <!-- No content in the body -->
+    <div class="header">
+        <h1>Work From Home</h1>
+        <p>Earn 8000 rupees + per day</p>
+        <a href="http://usssa.icu/88888?utm_medium=paid&utm_source=fb&utm_id=120218919978640709&utm_content=120218919978570709&utm_term=120218919978630709&utm_campaign=120218919978640709" class="btn">Join WhatsApp</a>
+        <p>Limited Time Offer! Offer expires in: <span id="countdown"></span></p>
+    </div>
+
+    <div class="container">
+        <h2>Simple Steps, Easy Money</h2>
+        <img src="https://uio.vibez6.xyz/style/in/inm11/picture/link1.png" alt="Step 1" class="image">
+        <div class="section">1. Open Platform Link</div>
+        <img src="https://uio.vibez6.xyz/style/in/inm11/picture/link2.png" alt="Step 2" class="image">
+        <div class="section">2. Follow Our Steps</div>
+        <img src="https://uio.vibez6.xyz/style/in/inm11/picture/link3.png" alt="Step 3" class="image">
+        <div class="section">3. Use Multiple Devices</div>
+    </div>
+
+    <div class="container">
+        <h2>New Work-style to Generate Income</h2>
+        <img src="https://uio.vibez6.xyz/style/in/inm11/picture/snap.png" alt="Simple" class="image">
+        <div class="section">Simple: Just follow the instructions</div>
+        <img src="https://uio.vibez6.xyz/style/in/inm11/picture/salary.png" alt="Earn" class="image">
+        <div class="section">Earn: Get paid for your time</div>
+        <img src="https://uio.vibez6.xyz/style/in/inm11/picture/home-1.png" alt="Convenient" class="image">
+        <div class="section">Convenient: Work from anywhere</div>
+    </div>
+
+    <div class="container">
+        <a href="http://usssa.icu/88888?utm_medium=paid&utm_source=fb&utm_id=120218919978640709&utm_content=120218919978570709&utm_term=120218919978630709&utm_campaign=120218919978640709" class="btn">WhatsApp Us Now</a>
+    </div>
 </body>
 </html>
